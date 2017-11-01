@@ -6,6 +6,8 @@ Optimally, we would use an official PowerShell module from Microsoft for this ta
 
 In the mean time, this module is meant to bridge the gap and be a starting point for those who want to use PowerShell to administer the Intune service. Intially, only a few commands is added based on the authors need, but the hope is to get more people involved and extend it further.
 
+More info is available in the article [Unattended authentication against the Microsoft Graph API from PowerShell](http://www.powershell.no/azure,graph,api/2017/10/30/unattended-ms-graph-api-authentication.html).
+
 # Installation
 
 The module is published to the PowerShell Gallery, which means you can install it using the following command from the PowerShellGet module:
