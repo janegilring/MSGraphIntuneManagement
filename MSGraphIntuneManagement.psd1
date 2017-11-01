@@ -12,7 +12,7 @@
 RootModule = 'MSGraphIntuneManagement.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1'
+ModuleVersion = '0.2'
 
 # ID used to uniquely identify this module
 GUID = 'd8ed490f-3c50-479f-ade5-d016a5f71c82'
@@ -27,7 +27,7 @@ CompanyName = 'PS Community'
 Copyright = '(c) 2017 Jan Egil Ring. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'PowerShell module for working with the Microsoft Graph Intune API'
+Description = 'PowerShell module for working with the Microsoft Graph Intune API. This module is meant to bridge the gap and be a starting point for those who want to use PowerShell to administer the Intune service until an official Intune PowerShell module is provided by Microsoft.'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '3.0'
@@ -105,7 +105,8 @@ PrivateData = @{
 
         # ReleaseNotes of this module
         ReleaseNotes = '
-        0.1 - Initial version
+        0.2 - Adds support for Azure Active Directory Authentication Library (ADAL) forms based login
+        0.1 - Initial version - introduction: http://www.powershell.no/azure,graph,api/2017/10/30/unattended-ms-graph-api-authentication.html
         '
 
         # External dependent modules of this module
