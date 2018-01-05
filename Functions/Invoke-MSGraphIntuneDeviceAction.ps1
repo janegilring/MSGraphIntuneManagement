@@ -24,6 +24,7 @@
         [switch]$RemoveCompanyData,
         [switch]$FactoryReset,
         [switch]$Reboot,
+        [switch]$Delete,
         [Parameter(Mandatory = $true, HelpMessage = "DeviceId (guid) for the Device you want to take action on must be specified:")]
         $DeviceID
     )
@@ -40,6 +41,7 @@
         if ($RemoveCompanyData.IsPresent) { $Count_Params++ }
         if ($factoryReset.IsPresent) { $Count_Params++ }
         if ($Reboot.IsPresent) { $Count_Params++ }
+        if ($Delete.IsPresent) { $Count_Params++ }
 
         if ($Count_Params -eq 0) {
 
@@ -108,6 +110,16 @@
 
 
         }
+
+        elseif ($Delete) {            
+            
+                        $Resource = "managedDevices/$DeviceID"
+                        $uri = "https://graph.microsoft.com/$graphApiVersion/$($resource)"
+                        write-verbose $uri
+                        Write-Verbose "Deleting device $DeviceID"
+                        Invoke-RestMethod -Uri $uri -Headers $AuthenticationToken -Method Delete -ErrorAction Stop            
+            
+                    }        
 
     }
 
